@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+/*Wheel style start*/
+.wheel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  padding-bottom: 120px;
+}
+p {
+  font-family: Montserrat;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background: url(../img/backr.jpg);
+  overflow-x: hidden;
+}
+.projectors {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projectors-img {
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  left: 5%;
+  z-index: -11;
+}
+
+.projectors-img:last-child {
+  left: 40%;
+}
+.wheel__title {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.wheel__text {
+  font-size: 50px;
+  font-weight: bolder;
+  color: rgb(50, 254, 189);
+  font-family: Montserrat;
+  text-align: center;
+}
+.content {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(66, 23, 255);
+  border-radius: 50%;
+  border: 15px solid rgb(43, 18, 155);
+  position: absolute;
+  overflow: hidden;
+  transition: 10s;
+  z-index: 5;
+}
+.arrow {
+  height: 70px;
+  width: 55px;
+  background: rgb(12, 252, 156);
+  position: absolute;
+  margin-bottom: 500px;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  z-index: 20;
+}
+
+.content div {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  height: 50%;
+  width: 300px;
+  position: absolute;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  left: 100px;
+}
+
+.content .one {
+  background-color: rgb(0, 47, 255);
+  left: 50%;
+}
+.content .two {
+  background-color: rgb(0, 242, 255);
+  transform: rotate(60deg);
+}
+.content .three {
+  background-color: rgb(0, 47, 255);
+  transform: rotate(120deg);
+}
+
+.content .four {
+  background-color: rgb(0, 242, 255);
+  transform: rotate(180deg);
+}
+
+.content .five {
+  background-color: rgb(0, 47, 255);
+  transform: rotate(240deg);
+}
+
+.content .six {
+  background-color: rgb(0, 242, 255);
+  transform: rotate(300deg);
+}
+
+#spin {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: rgb(31, 44, 114);
+  text-transform: uppercase;
+  border: 8px solid rgb(28, 250, 194);
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(46, 158, 255);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
+  font-family: Montserrat;
+}
+.active {
+  background-color: rgb(60, 255, 0);
+}
+.prize-img {
+  width: 145px;
+  height: 145px;
+}
+.circle {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgb(43, 28, 200);
+  z-index: 1;
+}
+
+.circle img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%) rotate(calc(360deg / 12 * var(--n)))
+    translate(300px) rotate(calc(-360deg / 12 * var(--n)));
+}
+
+.circle img:nth-of-type(1) {
+  --n: 1;
+}
+
+.circle img:nth-of-type(2) {
+  --n: 2;
+}
+
+.circle img:nth-of-type(3) {
+  --n: 3;
+}
+
+.circle img:nth-of-type(4) {
+  --n: 4;
+}
+
+.circle img:nth-of-type(5) {
+  --n: 5;
+}
+.circle img:nth-of-type(6) {
+  --n: 6;
+}
+.circle img:nth-of-type(7) {
+  --n: 7;
+}
+.circle img:nth-of-type(8) {
+  --n: 8;
+}
+.circle img:nth-of-type(9) {
+  --n: 9;
+}
+.circle img:nth-of-type(10) {
+  --n: 10;
+}
+.circle img:nth-of-type(11) {
+  --n: 11;
+}
+.circle img:nth-of-type(12) {
+  --n: 12;
+}
+
+/*Wheel style end */
+
+/* Modal style start*/
+.modal {
+  display: none;
+  border-radius: 10px;
+  width: 900px;
+
+  position: absolute;
+  z-index: 999;
+  overflow: hidden;
+}
+.modal__content {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.close {
+  cursor: pointer;
+  font-size: 40px;
+  padding-right: 15px;
+}
+.close__button {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.modal__title {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.title {
+  font-size: 40px;
+  font-weight: 800;
+  color: gold;
+  text-decoration: underline;
+  font-family: Montserrat;
+  text-align: center;
+}
+.modal__image {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.prize-win {
+  width: 300px;
+  height: 300px;
+}
+
+.button__colect {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.prize-btn {
+  width: 250px;
+  height: 50px;
+  font-size: 25px;
+  background-color: green;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  font-family: Montserrat;
+}
+.prize-btn:focus,
+.prize-btn:hover,
+.prize-btn:active {
+  background-color: rgb(55, 255, 55);
+}
+
+/*Modal style end */
+
+/*Fotter style start*/
+#timer {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Montserrat;
+}
+
+.end {
+  display: flex;
+  padding-left: 10px;
+  justify-content: space-between;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.end-text {
+  font-family: Montserrat;
+}
+
+.fotter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+  background-color: rgb(66, 132, 168);
+}
+em {
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  background-color: rgb(31, 44, 114);
+  border: 8px solid white;
+  font-family: Montserrat;
+  width: 80px;
+  height: 80px;
+}
+
+/*Footer style end*/
+
+/*Medai style end */
+
+@media screen and (max-width: 1300px) {
+  .projectors-img:last-child {
+    left: 30%;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .projectors-img:last-child {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .projectors-img:last-child {
+    left: 10%;
+  }
+  .wheel__text {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 905px) {
+  .projectors-img:last-child {
+    left: -5%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .projectors-img:last-child {
+    left: -15%;
+  }
+  .projectors-img {
+    display: none;
+  }
+  .wheel__text {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    overflow-y: hidden;
+  }
+  .end {
+    font-size: 20px;
+  }
+  #timer {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .content {
+    width: 350px;
+    height: 350px;
+    border: 10px solid rgb(55, 53, 53);
+  }
+  .arrow {
+    margin-bottom: 330px;
+    width: 40px;
+    height: 45px;
+  }
+  .content div {
+    width: 200px;
+    left: 74px;
+  }
+
+  .circle {
+    width: 500px;
+    height: 500px;
+  }
+  .circle img {
+    transform: translate(-50%, -50%) rotate(calc(360deg / 12 * var(--n)))
+      translate(220px) rotate(calc(-360deg / 12 * var(--n)));
+  }
+  .prize-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .wheel__text {
+    font-size: 17px;
+  }
+  .content {
+    width: 250px;
+    height: 250px;
+    border: 5px solid rgb(55, 53, 53);
+  }
+  .content div {
+    width: 150px;
+    left: 50px;
+  }
+  .arrow {
+    margin-bottom: 220px;
+    width: 30px;
+    height: 35px;
+  }
+
+  .circle img {
+    transform: translate(-50%, -50%) rotate(calc(360deg / 12 * var(--n)))
+      translate(140px) rotate(calc(-360deg / 12 * var(--n)));
+  }
+  .circle {
+    width: 310px;
+    height: 310px;
+  }
+  .circle img {
+    width: 20px;
+    height: 20px;
+  }
+  .prize-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .arrow {
+    margin-bottom: 240px;
+    width: 30px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .wheel__text {
+    font-size: 13px;
+  }
+  .content {
+    width: 200px;
+    height: 200px;
+    border: 5px solid rgb(55, 53, 53);
+  }
+  .content div {
+    width: 120px;
+    left: 40px;
+  }
+  .arrow {
+    margin-bottom: 190px;
+    width: 30px;
+    height: 25px;
+  }
+  .circle img {
+    transform: translate(-50%, -50%) rotate(calc(360deg / 12 * var(--n)))
+      translate(120px) rotate(calc(-360deg / 12 * var(--n)));
+  }
+  .circle {
+    width: 280px;
+    height: 280px;
+  }
+  .circle img {
+    width: 20px;
+    height: 20px;
+  }
+  .prize-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Media style end*/

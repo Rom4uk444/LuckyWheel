@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="/img/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>LuckyWheel</title>
+  </head>
+  <body>
+    <div class="projectors">
+      <img src="./img/light1.png" alt="" class="projectors-img" />
+      <img src="./img/light2.png" alt="" class="projectors-img" />
+    </div>
+
+    <div class="wheel__title">
+      <p class="wheel__text">Test your luck and try to win Dyson</p>
+    </div>
+
+    <div class="wheel">
+      <div class="modal">
+        <div class="modal__content">
+          <div class="modal__title">
+            <div class="title">Congrats you win Vacuum Cleaner Dyson!</div>
+          </div>
+          <div class="modal__image">
+            <img src="./img/dayson.png" alt="" сlass="prize-win" />
+          </div>
+
+          <div class="button__colect">
+            <button class="prize-btn">Collect prize</button>
+          </div>
+        </div>
+      </div>
+
+      <button id="spin" class="active">Spin</button>
+      <span class="arrow"></span>
+      <div class="content">
+        <div class="one">
+          <img src="./img/vacuum1.png" alt="" class="prize-img" />
+        </div>
+        <div class="two">
+          <img src="./img/vacuum2.png" alt="" class="prize-img" />
+        </div>
+        <div class="three">
+          <img src="./img/vacuum3.png" alt="" class="prize-img" />
+        </div>
+        <div class="four">
+          <img src="./img/dayson.png" alt="" class="prize-img" />
+        </div>
+        <div class="five">
+          <img src="./img/vacuum4.png" alt="" class="prize-img" />
+        </div>
+        <div class="six">
+          <img src="./img/vacuum5.png" alt="" class="prize-img" />
+        </div>
+      </div>
+
+      <div class="circle">
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+        <img src="./img/light.png" />
+      </div>
+    </div>
+    <div class="fotter" id="fotter">
+      <div class="end">
+        <p class="end-text">The promotion will end in:</p>
+        <div id="timer" class="timer">00:00:00</div>
+        <p class="end-text">Click on <em>SPIN</em> on the wheel and WIN!!!</p>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
